@@ -16,4 +16,15 @@ public final class Constants {
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
   }
+  public static class ArmConstants {
+    public static final int PIVOT_MOTOR_CAN_ID = 1;
+    public static final double GEAR_RATIO = 1;
+    public static final double POSITION_CONVERSION_FACTOR = 360 * GEAR_RATIO;
+    public static final double VELOCITY_CONVERSION_FACTOR = POSITION_CONVERSION_FACTOR / 60;
+    public static final double OFFSET = 0;
+    public static final double KP = 0;
+    public static final double KI = 0;
+    public static final double KD = 0;
+    public static final double SETPOINT_TOLERANCE = 1;
+  }
 }
