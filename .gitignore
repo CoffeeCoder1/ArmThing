@@ -172,3 +172,5 @@ out/
 *-window.json
 
 .metadata
+simgui-ds.json
+simgui.json
