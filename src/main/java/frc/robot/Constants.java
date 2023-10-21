@@ -15,6 +15,7 @@ package frc.robot;
 public final class Constants {
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
+    public static final double MANUAL_ARM_SLOW_FACTOR = 0.25;
   }
   public static class ArmConstants {
     public static final int PIVOT_MOTOR_CAN_ID = 1;
