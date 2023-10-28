@@ -15,17 +15,20 @@ package frc.robot;
 public final class Constants {
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
-    public static final double MANUAL_ARM_SLOW_FACTOR = 0.25;
+    public static final double MANUAL_ARM_SLOW_FACTOR = 1.0/8.0;
   }
   public static class ArmConstants {
     public static final int PIVOT_MOTOR_CAN_ID = 1;
-    public static final double GEAR_RATIO = 1;
+    public static final double GEAR_RATIO = 1.0/16.0;
     public static final double POSITION_CONVERSION_FACTOR = 360 * GEAR_RATIO;
-    public static final double VELOCITY_CONVERSION_FACTOR = POSITION_CONVERSION_FACTOR / 60;
+    public static final double VELOCITY_CONVERSION_FACTOR = POSITION_CONVERSION_FACTOR / 60.0;
     public static final double OFFSET = 0;
-    public static final double KP = 0;
+    public static final double KP = 0.005;
     public static final double KI = 0;
     public static final double KD = 0;
+    public static final double KS = 0;
+    public static final double KG = 0.1;
+    public static final double KV = 0;
     public static final double SETPOINT_TOLERANCE = 1;
   }
 }

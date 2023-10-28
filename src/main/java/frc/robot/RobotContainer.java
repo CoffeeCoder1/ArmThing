@@ -51,8 +51,12 @@ public class RobotContainer {
    * joysticks}.
    */
   private void configureBindings() {
-    m_arm.setDefaultCommand(new ManualMoveArmCommand(m_arm, (() -> (m_driverController.getLeftY() * OperatorConstants.MANUAL_ARM_SLOW_FACTOR))));
-    m_driverController.povRight().onTrue(Commands.runOnce(() -> m_arm.setPivotAngle(90), m_arm));
+    //m_arm.setDefaultCommand(Commands.run(() -> m_arm.setPivotAngle(0), m_arm));
+    //m_arm.setDefaultCommand(new ManualMoveArmCommand(m_arm, (() -> (m_driverController.getLeftY() * OperatorConstants.MANUAL_ARM_SLOW_FACTOR))));
+    m_driverController.povDown().onTrue(Commands.runOnce(() -> m_arm.setPivotAngle(0), m_arm));
+    m_driverController.povLeft().onTrue(Commands.runOnce(() -> m_arm.setPivotAngle(45), m_arm));
+    m_driverController.povUp().onTrue(Commands.runOnce(() -> m_arm.setPivotAngle(90), m_arm));
+    m_driverController.povRight().onTrue(Commands.runOnce(() -> m_arm.setPivotAngle(135), m_arm));
   }
 
   /**
