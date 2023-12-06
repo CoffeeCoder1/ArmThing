@@ -57,6 +57,8 @@ public class RobotContainer {
     m_driverController.povLeft().onTrue(Commands.runOnce(() -> m_arm.setPivotAngle(45), m_arm));
     m_driverController.povUp().onTrue(Commands.runOnce(() -> m_arm.setPivotAngle(90), m_arm));
     m_driverController.povRight().onTrue(Commands.runOnce(() -> m_arm.setPivotAngle(135), m_arm));
+
+    m_driverController.a().onTrue(Commands.runOnce(() -> m_arm.syncEncoders(), m_arm));
   }
 
   /**

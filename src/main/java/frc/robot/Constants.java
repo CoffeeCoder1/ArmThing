@@ -22,8 +22,10 @@ public final class Constants {
     public static final double GEAR_RATIO = 1.0/16.0;
     public static final double POSITION_CONVERSION_FACTOR = 360 * GEAR_RATIO;
     public static final double VELOCITY_CONVERSION_FACTOR = POSITION_CONVERSION_FACTOR / 60.0;
-    public static final double OFFSET = 0;
-    public static final double KP = 0.005;
+    public static final double ABS_POSITION_CONVERSION_FACTOR = 360;
+    public static final double ABS_VELOCITY_CONVERSION_FACTOR = POSITION_CONVERSION_FACTOR / 60.0;
+    public static final double OFFSET = 307;
+    public static final double KP = 0.004;//.005
     public static final double KI = 0;
     public static final double KD = 0;
     public static final double KS = 0;
